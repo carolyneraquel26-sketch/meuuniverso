@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Universo: Interação com o Mundo</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ecommerce.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="ecommerce-page">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Meu Universo</a>
+      <ul class="nav-links">
+        <li><a href="index.html#inicio">Início</a></li>
+        <li><a href="index.html#loja">Loja de Livros</a></li>
+        <li><a href="index.html#sobre">Sobre Mim</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="ecommerce-container">
+    <div class="breadcrumb">
+      Página Inicial &gt; Meu Universo: Interação com o Mundo.
+    </div>
+
+    <!-- Product Top Section -->
+    <section class="product-top">
+      <div class="product-thumbnails">
+        <div class="thumb-box">
+          <span
+            style="font-weight:900; color:#4a82a0; font-size: 0.75rem; text-align:center; line-height:1.2;">MEU<br>UNIVERSO</span>
+        </div>
+      </div>
+
+      <div class="product-main-image">
+        <img src="meu_universo_cover.png" alt="Meu Universo: Interação com o Mundo">
+      </div>
+
+      <div class="product-info">
+        <h1 class="ecommerce-title">MEU UNIVERSO:<br>INTERAÇÃO COM O MUNDO.</h1>
+        <div class="product-rating">
+          ★★★★★ (Sem avaliações)
+        </div>
+
+        <div class="price-old">R$ 30,00</div>
+        <div class="price-new-container">
+          <div class="price-new">R$ 25,00</div>
+          <div class="badge-discount">-28%</div>
+        </div>
+
+        <div class="product-actions">
+          <button class="btn-buy" onclick="window.location.href='https://seguro.meuuniversopeculiar.com.br/cart'">COMPRAR</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Description Section -->
+    <section class="description-section">
+      <h2 class="section-title">DESCRIÇÃO DO PRODUTO</h2>
+      <div class="description-text">
+        <p>O livro apresenta uma narrativa introspectiva sobre a forma singular de perceber, sentir e se relacionar com
+          o mundo. A partir de experiências pessoais, a obra explora a sensação constante de ser diferente, como se
+          estivesse fora de sintonia com as outras pessoas, questionando padrões sociais, comportamentos esperados e a
+          própria identidade.</p>
+        <p>Ao longo dos capítulos, são abordados temas como dificuldades de socialização, sensibilidade a estímulos,
+          relações interpessoais, experiências escolares marcadas por incompreensão e bullying, além dos desafios no
+          ambiente de trabalho. A autora descreve um funcionamento interno intenso, baseado em interesses profundos e
+          ciclos de envolvimento emocional, que podem surgir com força e, da mesma forma, se reorganizar ou desaparecer.
+        </p>
+        <p>A obra também traz reflexões sobre afeto, limites físicos e emocionais, e a forma única de vivenciar
+          conexões. Em meio a essas experiências, surge a busca por conforto, pertencimento e compreensão tanto do mundo
+          quanto de si mesma.</p>
+      </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section class="specs-section">
+      <h2 class="section-title">ESPECIFICAÇÕES TÉCNICAS</h2>
+      <div class="specs-grid">
+        <div class="spec-item">
+          90 páginas
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="specs-section" style="margin-bottom: 2rem;">
+      <div class="reviews-tabs">
+        <div class="review-tab active">AVALIAÇÕES (0)</div>
+      </div>
+
+      <div class="reviews-content">
+        <button id="openReviewModal" class="btn-buy" style="margin-bottom: 2rem;">AVALIAR PRODUTO</button>
+        <div id="comments-list" style="max-width: 600px; margin: 0 auto; margin-bottom: 2rem;"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <div class="logo" style="display: inline-block; font-size: 1.8rem;">Meu Universo</div>
+    </div>
+    <div class="footer-content">
+      <div class="footer-left">
+        <p>Explorando e compartilhando ideias em busca de um mundo mais compreensivo e acolhedor.</p>
+      </div>
+      <div class="footer-right">
+        <h4 class="footer-title">Contato</h4>
+        <p class="footer-contact">✉ carol.ca26@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Feito com ❤️ por Carol © 2026</p>
+    </div>
+  </footer>
+
+  <!-- Review Modal -->
+  <div id="reviewModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <button id="closeReviewModal" class="modal-close">&times;</button>
+      <h2 class="modal-title">AVALIE O PRODUTO</h2>
+      <p class="modal-subtitle">Meu universo: Interação Com o Mundo.</p>
+
+      <form id="reviewForm" class="modal-form">
+        <label class="modal-label">QUANTIDADE DE ESTRELAS</label>
+        <div class="star-rating" id="starRating">
+          <span class="star selected" data-value="1">★</span>
+          <span class="star selected" data-value="2">★</span>
+          <span class="star selected" data-value="3">★</span>
+          <span class="star selected" data-value="4">★</span>
+          <span class="star selected" data-value="5">★</span>
+        </div>
+        <input type="hidden" id="ratingValue" value="5">
+
+        <label class="modal-label">NOME</label>
+        <input type="text" class="modal-input review-input" placeholder="Ex.: Adriana" required>
+
+        <label class="modal-label">E-MAIL</label>
+        <input type="email" class="modal-input review-input" placeholder="Ex.: adriana@gmail.com" required>
+
+        <label class="modal-label">AVALIAÇÃO</label>
+        <textarea class="modal-input review-input" placeholder="Escreva o que você achou deste produto..." rows="4"
+          required></textarea>
+
+        <button type="submit" class="modal-submit">ENVIAR AVALIAÇÃO</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
