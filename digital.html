@@ -48,14 +48,12 @@
 
       <div class="product-info">
         <h1 class="ecommerce-title">MEU UNIVERSO AUTISTA<br></h1>
-        <div class="product-rating">
-          ★★★★★ (Sem avaliações)
-        </div>
+
 
         <div class="price-old">R$ 30,00</div>
         <div class="price-new-container">
           <div class="price-new">R$ 26,90</div>
-          <div class="badge-discount">-28%</div>
+          <div class="badge-discount">-10,33%</div>
         </div>
 
         <div class="product-actions">
@@ -113,17 +111,7 @@
     </section>
 
 
-    <!-- Reviews Section -->
-    <section class="specs-section" style="margin-bottom: 2rem;">
-      <div class="reviews-tabs">
-        <div class="review-tab active">AVALIAÇÕES (0)</div>
-      </div>
 
-      <div class="reviews-content">
-        <button id="openReviewModal" class="btn-buy" style="margin-bottom: 2rem;">AVALIAR PRODUTO</button>
-        <div id="comments-list" style="max-width: 600px; margin: 0 auto; margin-bottom: 2rem;"></div>
-      </div>
-    </section>
   </main>
 
   <!-- Footer -->
@@ -145,38 +133,7 @@
     </div>
   </footer>
 
-  <!-- Review Modal -->
-  <div id="reviewModal" class="modal-overlay hidden">
-    <div class="modal-content">
-      <button id="closeReviewModal" class="modal-close">&times;</button>
-      <h2 class="modal-title">AVALIE O PRODUTO</h2>
-      <p class="modal-subtitle">Meu Universo Autista</p>
 
-      <form id="reviewForm" class="modal-form">
-        <label class="modal-label">QUANTIDADE DE ESTRELAS</label>
-        <div class="star-rating" id="starRating">
-          <span class="star selected" data-value="1">★</span>
-          <span class="star selected" data-value="2">★</span>
-          <span class="star selected" data-value="3">★</span>
-          <span class="star selected" data-value="4">★</span>
-          <span class="star selected" data-value="5">★</span>
-        </div>
-        <input type="hidden" id="ratingValue" value="5">
-
-        <label class="modal-label">NOME</label>
-        <input type="text" class="modal-input review-input" placeholder="Ex.: Adriana" required>
-
-        <label class="modal-label">E-MAIL</label>
-        <input type="email" class="modal-input review-input" placeholder="Ex.: adriana@gmail.com" required>
-
-        <label class="modal-label">AVALIAÇÃO</label>
-        <textarea class="modal-input review-input" placeholder="Escreva o que você achou deste produto..." rows="4"
-          required></textarea>
-
-        <button type="submit" class="modal-submit">ENVIAR AVALIAÇÃO</button>
-      </form>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 
