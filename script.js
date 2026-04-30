@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+Fdocument.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.tab-btn');
   const contents = document.querySelectorAll('.payment-content');
 
@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Star Rating Logic
   const stars = document.querySelectorAll('.star');
   const ratingInput = document.getElementById('ratingValue');
-  
+
   stars.forEach(star => {
-    star.addEventListener('click', function() {
+    star.addEventListener('click', function () {
       const value = parseInt(this.getAttribute('data-value'));
       ratingInput.value = value;
       stars.forEach(s => {
@@ -55,13 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (reviewForm) {
     reviewForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       const inputs = reviewForm.querySelectorAll('.review-input');
       const name = inputs[0].value;
       const email = inputs[1].value;
       const comment = inputs[2].value;
       const rating = parseInt(ratingInput.value) || 5;
-      
+
       if (name && comment) {
         // Hide empty state box
         const noReviewsBox = document.getElementById('noReviewsBox');
@@ -83,9 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
         reviewEl.style.marginBottom = '1.5rem';
         reviewEl.style.border = '1px solid #e5e7eb';
         reviewEl.style.textAlign = 'left';
-        
+
         let starsHtml = '';
-        for(let i=1; i<=5; i++) {
+        for (let i = 1; i <= 5; i++) {
           starsHtml += i <= rating ? '<span style="color: #fbbf24;">★</span>' : '<span style="color: #d1d5db;">★</span>';
         }
 
@@ -96,9 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.6; margin:0;">${comment}</p>
         `;
-        
+
         container.prepend(reviewEl);
-        
+
         // Reset form and close modal
         reviewForm.reset();
         stars.forEach(s => s.classList.add('selected'));
